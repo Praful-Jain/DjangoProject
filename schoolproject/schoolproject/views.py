@@ -1,4 +1,4 @@
 from django.http import HttpResponse
 
 def aboutUs(request):
-    return HttpResponse("Welcome to Jainam")
+    return HttpResponse("Welcome to Jainam Academy")
