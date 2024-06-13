@@ -27,7 +27,8 @@ def student_api(request, pk=None):
         return Response(serializer.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
     if request.method =='PUT':
-        id = request.data.get('id')
+        # id = request.data.get('id')
+        id = pk
         stu = get_object_or_404(Student, id=id)
         serializer = StudentSerializer(stu, data=request.data, partial=True)
         if serializer.is_valid():
@@ -36,7 +37,8 @@ def student_api(request, pk=None):
         return Response(serializer.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
     
     if request.method =='PATCH':
-        id = request.data.get('id')
+        # id = request.data.get('id')
+        id = pk
         stu = get_object_or_404(Student, id=id)
         serializer = StudentSerializer(stu, data=request.data, partial=True)
         if serializer.is_valid():
