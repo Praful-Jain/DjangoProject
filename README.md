@@ -1,0 +1,1 @@
+Note:- Take pull of DjangoProject repo and use the "project_env" virtual environment available in the repo to run application. And to debug we can add custom script in launch.json for individual applications within the DjangoProject repo
