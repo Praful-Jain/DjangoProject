@@ -1,0 +1,22 @@
+{
+  "configurations": [
+  
+    {
+      "name": "Python Debugger: Python File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}"
+    },
+    {
+      "name": "api_view",
+      "python": "D:/DjangoProject/project_env/Scripts/python",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "D:/DjangoProject/api_view/manage.py",
+      "console": "internalConsole",
+      "args": ["runserver"],
+     "django": true,
+    //  "justMyCode": true,
+    }
+  ]
+}
