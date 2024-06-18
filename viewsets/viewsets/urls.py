@@ -22,7 +22,8 @@ from rest_framework.routers import DefaultRouter
 # In viewsets, we don't need to define/maintain URLs, just make routers and register your class with router.
 
 router = DefaultRouter()  # Creating Router Object
-router.register('student_api', views.StudentViewSet, basename='student')  # register your class with router
+# router.register('student_api', views.StudentViewSet, basename='student')  # register your class with router
+router.register('student_api', views.StudentModelViewSet, basename='student')  # register your class with router
 
 urlpatterns = [
     path('admin/', admin.site.urls),

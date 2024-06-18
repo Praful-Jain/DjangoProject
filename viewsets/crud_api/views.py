@@ -46,4 +46,14 @@ class StudentViewSet(viewsets.ViewSet):
         stu.delete()
         return Response({'msg':f'Student with id={pk} deleted successfully'})
 
- 
+
+# The ModelViewSet class inherits from GenericAPIView and includes implementation for various actions, by mixing in the behavior of the various mixin classes
+# Provides list(), retrieve(), create(), update(), partial_update() and destroy() actions.
+
+class StudentModelViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+class StudentReadOnlyViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
