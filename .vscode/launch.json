@@ -13,6 +13,7 @@
       "type": "debugpy",
       "request": "launch",
       "program": "D:/DjangoProject/api_view/manage.py",
+      // "program": "D:/DjangoProject/authentication_permission/manage.py",
       "console": "internalConsole",
       "args": ["runserver"],
      "django": true,

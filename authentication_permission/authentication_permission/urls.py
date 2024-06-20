@@ -1,5 +1,5 @@
 """
-URL configuration for api_view project.
+URL configuration for authentication_permission project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,15 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-# from api import views
-from crud import views
-# from class_based_APIView import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from crud_api import views
+router = DefaultRouter()
+router.register('student_api', views.StudentModelViewSet, basename='student')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('student_api/', views.student_api),       # functions-based view
-    path('student_api/<int:pk>', views.student_api),
-    # path('student_api/', views.StudentAPI.as_view()),     # class-based view
-    # path('student_api/<int:pk>/', views.StudentAPI.as_view()),
+    path('', include(router.urls)),
+    # to enable inbuilt login functionality in browsable api (eg, in case of SessionAuthentication), we use builtin urls of DRF
+    path('auth/', include('rest_framework.urls', namespace='framework')),
 ]
