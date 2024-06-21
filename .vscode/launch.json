@@ -14,6 +14,7 @@
       "request": "launch",
       "program": "D:/DjangoProject/api_view/manage.py",
       // "program": "D:/DjangoProject/authentication_permission/manage.py",
+      // "program": "D:/DjangoProject/token_authentication/manage.py",
       "console": "internalConsole",
       "args": ["runserver"],
      "django": true,
