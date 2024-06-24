@@ -7,6 +7,18 @@ from .custom_permission import MyPermission
 from .custom_authentication import MyAuthentication
 
 # Authentication -> BasicAuthentication, SessionAuthentication, TokenAuthentication, CustomAuthentication
+# There also exist some third-party packages which provides authentication :-
+# 1. Django OAuth Toolkit
+# 2. JSON Web Token Authentication  (famous)
+# 3. Hawk HTTP Authentication
+# 4. HTTP Signature Authentication
+# 5. Djoser
+# 6. django-rest-auth / dj-rest-auth
+# 7. django-rest-framework-social-oauth2
+# 8. django-rest-knox
+# 9. drfpassworkless
+
+# Permission ->  IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser, AllowAny, DjangoModelPermissions, DjangoModelPermissionsOrAnonReadOnly, CustomPermission
 # There also exist some third-party packages which provides permissions :-
 # 1. DRF - Access Policy
 # 2. Composed permissions
